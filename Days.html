@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Days.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Explore the Days</h1>
+    </header>
+    <main>
+        <section class="days-container">
+            <div class="day-card">
+                <h2>Monday</h2>
+                <p>Start your week with positivity and planning!</p>
+            </div>
+            <div class="day-card">
+                <h2>Tuesday</h2>
+                <p>Focus on productivity and setting achievable goals.</p>
+            </div>
+            <div class="day-card">
+                <h2>Wednesday</h2>
+                <p>Mid-week review and recalibration for the remaining days.</p>
+            </div>
+            <div class="day-card">
+                <h2>Thursday</h2>
+                <p>Deep work and getting into the zone of excellence.</p>
+            </div>
+            <div class="day-card">
+                <h2>Friday</h2>
+                <p>Wrap up your work and look forward to the weekend!</p>
+            </div>
+            <div class="day-card">
+                <h2>Saturday</h2>
+                <p>Relax, rejuvenate, or explore hobbies and activities.</p>
+            </div>
+            <div class="day-card">
+                <h2>Sunday</h2>
+                <p>Plan and prepare for a new week with a fresh mind!</p>
+            </div>
+        </section>
+    </main>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.day-card');
+
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            alert(`${card.querySelector('h2').textContent} - Focus on positivity and productivity today!`);
+        });
+    });
+});
+
+    </script>
+    
+</body>
+</html>

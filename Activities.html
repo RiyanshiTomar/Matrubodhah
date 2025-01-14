@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities Page</title>
+    <link rel="stylesheet" href="activities.css">
+</head>
+<body>
+    <header>
+        <h1>Discover Activities</h1>
+    </header>
+    <main>
+        <section class="activities-container">
+            <div class="activity-card">
+                <h2>Yoga</h2>
+                <p>Embrace mindfulness and improve flexibility.</p>
+            </div>
+            <div class="activity-card">
+                <h2>Painting</h2>
+                <p>Express your creativity with colors and brushes.</p>
+            </div>
+            <div class="activity-card">
+                <h2>Cooking</h2>
+                <p>Explore new recipes and enjoy delicious meals.</p>
+            </div>
+            <div class="activity-card">
+                <h2>Reading</h2>
+                <p>Dive into books and expand your knowledge.</p>
+            </div>
+            <div class="activity-card">
+                <h2>Gardening</h2>
+                <p>Connect with nature and grow beautiful plants.</p>
+            </div>
+        </section>
+    </main>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.activity-card');
+
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            alert(`${card.querySelector('h2').textContent} - Unleash your passion and enjoy this activity!`);
+        });
+    });
+});
+
+    </script>
+</body>
+</html>

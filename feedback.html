@@ -5,10 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>मातृबोधः</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="animations.css">
-    <link rel="stylesheet" href="scontentcss.css">
-    <link rel="stylesheet" href="footercss.css">
     <link rel="stylesheet" href="feedback.css">
 </head>
 
@@ -16,7 +12,7 @@
     <header>
         <nav>
             <!-- Wrap the logo text in an anchor tag -->
-            <a href="index.html" class="logo">मातृबोधः</a>
+            <a href="index.html" class="logo"><h1>मातृबोधः</h1></a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#wisdom">About</a></li>
@@ -24,13 +20,13 @@
                     <a href="#">Content</a>
                     <ul class="dropdown-content">
                         <li><a href="countingpage.html">Counting</a></li>
-                        <li><a href="#">Days</a></li>
-                        <li><a href="#">Activities</a></li>
+                        <li><a href="Days.html">Days</a></li>
+                        <li><a href="Activities.html">Activities</a></li>
                     </ul>
                 </li>
                 <li><a href="login.html">Login</a></li>
             </ul>
-            <a href="#" class="btn-contact">Contact</a>
+            <a href="Contact.html" class="btn-contact">Contact</a>
         </nav>
     </header>
     <div class="main-section">
@@ -104,10 +100,26 @@
             </div>
         </div>
     </div>
-</body>
+
+<footer>
+    <p>&copy; 2025 मातृबोधः. All rights reserved.</p>
+</footer>
 <script>
     function notify(){
-        alert("Feedback Submitted Sucessfully")
+        document.getElementById('feedback-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const submitButton = document.getElementById('submit-button');
+            submitButton.textContent = 'Submitting...';
+            submitButton.disabled = true;
+
+            setTimeout(() => {
+                alert("Feedback Submitted Successfully! Thank you for your response.");
+                submitButton.textContent = 'Submit';
+                submitButton.disabled = false;
+                document.getElementById('feedback-form').reset();
+            }, 2000);
+        });
     }
 </script>
+</body>
 </html>
